@@ -1,0 +1,136 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/example.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jquery.wframeslider.css"/>
+	
+	<script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.wframeslider.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div style="margin: 5px;">
+			<button id="startSlider">Start</button>
+			<button id="stopSlider">Stop</button>
+		</div>
+		<div class="col-sm-12">
+			<div class="row">
+				<div class="col-sm-6">
+					<div id="slider1" class="wrapper">
+						<div class="title">
+							Title
+							<div class="wframeslider-buttons">
+								<button class="wframeslider-button wframeslider-button-active" slider-order="0"></button>
+								<button class="wframeslider-button" slider-order="1"></button>
+							</div>
+						</div>
+						<div class="stage">
+							<div class="wframeslider-items">
+								<div slider-order="0" style="height:300px;width:100%;background-color: #b0b0b0">
+									Frame 1
+								</div>
+								<div slider-order="1" style="height:300px;width:100%;background-color: #e0e0e0;visibility: hidden">
+									Frame 2
+								</div>
+							</div>
+						</div>
+						<div class="notes">
+							Note
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div id="slider2" class="wrapper">
+						<div class="title">
+							Title
+							<div class="wframeslider-buttons">
+								<button class="wframeslider-button wframeslider-button-active" slider-order="0"></button>
+								<button class="wframeslider-button" slider-order="1"></button>
+								<button class="wframeslider-button" slider-order="2"></button>
+							</div>
+						</div>
+						<div class="stage">
+							<div class="wframeslider-items">
+								<div slider-order="0" style="height:300px;width:100%;background-color: #a0a0a0">
+									Frame 1
+								</div>
+								<div slider-order="1" style="height:300px;width:100%;background-color: #c0c0c0;visibility: hidden">
+									Frame 2
+								</div>
+								<div slider-order="2" style="height:300px;width:100%;background-color: #f0f0f0;visibility: hidden">
+									Frame 3
+								</div>
+							</div>
+						</div>
+						<div class="notes">
+							Note
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider3" class="wrapper">
+						<div class="title">
+							Title
+							<div class="wframeslider-buttons">
+								<button class="wframeslider-button wframeslider-button-active" slider-order="0"></button>
+								<button class="wframeslider-button" slider-order="1"></button>
+								<button class="wframeslider-button" slider-order="2"></button>
+								<button class="wframeslider-button" slider-order="3"></button>
+								<button class="wframeslider-button" slider-order="4"></button>
+								<button class="wframeslider-button" slider-order="5"></button>
+							</div>
+						</div>
+						<div class="stage">
+							<div class="wframeslider-items">
+								<div slider-order="0" style="height:300px;width:100%;background-color: #a0a0a0">
+									Frame 1
+								</div>
+								<div slider-order="1" style="height:300px;width:100%;background-color: #b0b0b0;visibility: hidden">
+									Frame 2
+								</div>
+								<div slider-order="2" style="height:300px;width:100%;background-color: #c0c0c0;visibility: hidden">
+									Frame 3
+								</div>
+								<div slider-order="3" style="height:300px;width:100%;background-color: #d0d0d0;visibility: hidden">
+									Frame 4
+								</div>
+								<div slider-order="4" style="height:300px;width:100%;background-color: #e0e0e0;visibility: hidden">
+									Frame 5
+								</div>
+								<div slider-order="5" style="height:300px;width:100%;background-color: #f0f0f0;visibility: hidden">
+									Frame 6
+								</div>
+							</div>
+						</div>
+						<div class="notes">
+							Note
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript">
+        $(document).ready(function (){
+			$("#slider1").wframeslider();
+			$("#slider2").wframeslider({ interval: 3000 });
+			$("#slider3").wframeslider({ interval: 1000 });
+			
+		$("#startSlider").live("click", function () {
+            $("#slider1").wframeslider('startSlider');
+            $("#slider2").wframeslider('startSlider');
+			$("#slider3").wframeslider('startSlider');
+        });
+
+        $("#stopSlider").live("click", function () {
+            $("#slider1").wframeslider('stopSlider');
+            $("#slider2").wframeslider('stopSlider');
+			$("#slider3").wframeslider('stopSlider');
+        });
+        });
+    </script>
+</body>
+</html>
+
+

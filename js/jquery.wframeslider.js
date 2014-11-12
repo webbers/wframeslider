@@ -1,4 +1,13 @@
-﻿;(function ($, window, document, undefined) {
+﻿/*
+ *  jQuery WFrameSlider - v0.1.0
+ *  A slider to frames without transitions
+ *  
+ *
+ *  Made by Webbers
+ *  Under MIT License
+ */
+
+;(function ($, window, document, undefined) {
 
     var pluginName = "wframeslider",
         defaults = {
